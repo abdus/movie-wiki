@@ -1,4 +1,0 @@
-9526f02a9f92adaf39272b5d785cff61
-http://image.tmdb.org/t/p/w342/    baseurl for image 
-https://api.themoviedb.org/3/search/movie?api_key=9526f02a9f92adaf39272b5d785cff61&query=Don%202
-https://api.themoviedb.org/3/movie/41109?api_key=9526f02a9f92adaf39272b5d785cff61
