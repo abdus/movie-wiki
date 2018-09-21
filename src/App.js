@@ -42,17 +42,17 @@ export default class App extends Component {
           <Nav/>
           <Route
             exact
-            path="/" 
+            path="/movie-wiki/" 
             render= {(props) => <Header {...props} searchChange={this.onSearchChange}/>}
           />
           <Route
             exact 
-            path="/"
+            path="/movie-wiki/"
             render= {(props) => <MovieList {...props} movies={this.state.movies}/>}
           />
           <Route
             exact 
-            path="/movie/:id"
+            path="/movie-wiki/movie/:id"
             component={MovieDetails}
           />
         </div>
