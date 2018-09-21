@@ -1,0 +1,44 @@
+header {
+    height: 70vh;
+    display: table-cell;
+    width: 100vw;
+    text-align: center;
+    vertical-align: middle;
+    color: orange;
+}
+header h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    margin: 20px;
+}
+header .searchbox {
+    width: 40%;
+    margin: auto;
+    box-sizing: border-box;
+}
+header .searchbox input,
+header .searchbox button {
+    font-family: inherit;
+    padding: .7rem;
+    width: 60%;
+    border: 1px solid orange;
+    border-radius: 30px 0 0px 30px;
+    text-indent: 15px;
+} 
+header .searchbox button {
+    width: 20%;
+    border-radius: 0 30px 30px 0;
+    text-indent: 0;
+}
+
+@media screen and (max-width: 800px) {
+    header .searchbox {
+        width: 100%;
+    }
+    header .searchbox input {
+        width: 50%;
+    }
+    header .searchbox button {
+        width: 30%;
+    }
+}

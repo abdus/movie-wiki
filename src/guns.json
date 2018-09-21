@@ -1,0 +1,266 @@
+[
+    {
+        "general_info": {
+            "name": "AK-47",
+            "alias": "",
+            "type": "Assault Rifle",
+            "image_link": "https://upload.wikimedia.org/wikipedia/commons/3/32/%D0%90%D0%9A-47.jpg",
+            "description": "The AK-47, AK, or as it is officially known (Russian: Автома́т Кала́шникова, tr. Avtomát Kaláshnikova, lit."
+        },
+        "technical_info": {
+            "gun_action": "Gas Operated",
+            "barrel_length": "415 mm",
+            "total_length": "880 mm",
+            "cartridge": "7.62×39mm",
+            "rate_of_fire": "",
+            "weight": "3.47 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "Mikhail Kalashnikov",
+            "place_of_origin": "Soviet Union"
+        }
+    },
+    {
+        "general_info": {
+            "name": "M4 Carbine",
+            "alias": "",
+            "type": "Assault Rifle",
+            "image_link": "https://upload.wikimedia.org/wikipedia/commons/3/39/PEO_M4_Carbine_RAS_M68_CCO.jpg",
+            "description": "The M4 carbine is a shorter and lighter variant of the M16A2 assault rifle."
+        },
+        "technical_info": {
+            "gun_action": "Gas Operated",
+            "barrel_length": "370 mm",
+            "total_length": "840 mm",
+            "cartridge": "5.56×45mm NATO",
+            "rate_of_fire": "700–950 round/min",
+            "weight": "2.9 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "Colt's Manufacturing Company",
+            "place_of_origin": "United States"
+        }
+    },
+    {
+        "general_info": {
+            "name": "M24",
+            "alias": "",
+            "type": "Sniper Rifle",
+            "image_link": "https://upload.wikimedia.org/wikipedia/commons/a/a7/IDF-M24-SWS-pic001.jpg",
+            "description": "The M24 Sniper Weapon System (SWS) is the military and police version of the Remington Model 700 rifle."
+        },
+        "technical_info": {
+            "gun_action": "Bolt Operated",
+            "barrel_length": "610 mm",
+            "total_length": "1,092 mm",
+            "cartridge": "7.62×51mm NATO",
+            "rate_of_fire": "20 round/min",
+            "weight": "5.4 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "Remington Arms",
+            "place_of_origin": "United States"
+        }
+    },
+    {
+        "general_info": {
+            "name": "AWM",
+            "alias": "",
+            "type": "Sniper Rifle",
+            "image_link": "https://vignette.wikia.nocookie.net/crossfirefps/images/c/ce/AWM.png",
+            "description": "The Accuracy International AWM (Arctic Warfare Magnum or AI-Arctic Warfare Magnum) is a bolt-action sniper rifle."
+        },
+        "technical_info": {
+            "gun_action": "Bolt Operated",
+            "barrel_length": "660 mm",
+            "total_length": "1200 mm",
+            "cartridge": ".300 Winchester Magnum",
+            "rate_of_fire": "20 round/min",
+            "weight": "6.5 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "Accuracy International ",
+            "place_of_origin": "United Kingdom"
+        }
+    },
+    {
+        "general_info": {
+            "name": "M16A1",
+            "alias": "",
+            "type": "Assault Rifle",
+            "image_link": "https://upload.wikimedia.org/wikipedia/commons/6/6b/M16A1_brimob.jpg",
+            "description": ""
+        },
+        "technical_info": {
+            "gun_action": "Gas Operated",
+            "barrel_length": "508 mm",
+            "total_length": "1003 mm",
+            "cartridge": "5.56×45mm NATO",
+            "rate_of_fire": "700–950 rounds/min sustained, 45–60 rounds/min semi-auto",
+            "weight": "2.89 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "",
+            "place_of_origin": "United States"
+        }
+    },
+    {
+        "general_info": {
+            "name": "Uzi",
+            "alias": "",
+            "type": "Submachine Gun",
+            "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uzi_of_the_israeli_armed_forces.jpg/1024px-Uzi_of_the_israeli_armed_forces.jpg",
+            "description": ""
+        },
+        "technical_info": {
+            "gun_action": "Blowback",
+            "barrel_length": "260 mm",
+            "total_length": "445 mm",
+            "cartridge": "9mm Parabellum",
+            "rate_of_fire": "600 rounds/min",
+            "weight": "3.5 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "Uziel Gal",
+            "place_of_origin": "Israel"
+        }
+    },
+    {
+        "general_info": {
+            "name": "UMP45",
+            "alias": "",
+            "type": "Submachine Gun",
+            "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/HKUMP45.JPG/1280px-HKUMP45.JPG",
+            "description": ""
+        },
+        "technical_info": {
+            "gun_action": "Blowback",
+            "barrel_length": "200 mm",
+            "total_length": "450 mm",
+            "cartridge": ".45 ACP",
+            "rate_of_fire": "600 rounds/min",
+            "weight": "2.5 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "Heckler & Koch",
+            "place_of_origin": "Germany"
+        }
+    },
+    {
+        "general_info": {
+            "name": "UMP9",
+            "alias": "",
+            "type": "Submachine Gun",
+            "image_link": "https://i.redd.it/bs1mmvvge9z01.jpg",
+            "description": ""
+        },
+        "technical_info": {
+            "gun_action": "Blowback",
+            "barrel_length": "200 mm",
+            "total_length": "450 mm",
+            "cartridge": "9×19mm Parabellum ",
+            "rate_of_fire": "600–650 rounds/min",
+            "weight": "2.3 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "Heckler & Koch",
+            "place_of_origin": "Germany"
+        }
+    },
+    {
+        "general_info": {
+            "name": "UMP40",
+            "alias": "",
+            "type": "Submachine Gun",
+            "image_link": "https://s3.amazonaws.com/hkusa/20161024133049/4-UMP40-suppressor-stock-folded-RIGHT-AUG-8-2016.jpg",
+            "description": ""
+        },
+        "technical_info": {
+            "gun_action": "Blowback",
+            "barrel_length": "200 mm",
+            "total_length": "450 mm",
+            "cartridge": ".40 S&W",
+            "rate_of_fire": "600-745 rounds/min",
+            "weight": "2.3 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "Heckler & Koch",
+            "place_of_origin": "Germany"
+        }
+    },
+    {
+        "general_info": {
+            "name": "FN SCAR-L",
+            "alias": "",
+            "type": "Assault Rifle",
+            "image_link": "https://fnamerica.com/wp-content/uploads/2012/09/SCAR-17S-FDE_Rotators_6-1800x897.png",
+            "description": ""
+        },
+        "technical_info": {
+            "gun_action": "Short-stroke gas-operated piston",
+            "barrel_length": "254 mm",
+            "total_length": "787 mm",
+            "cartridge": "5.56×45mm NATO",
+            "rate_of_fire": "550–650  rounds/min",
+            "weight": "3.04 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "FN Herstal",
+            "place_of_origin": "Belgium"
+        }
+    },
+    {
+        "general_info": {
+            "name": "FN SCAR-H",
+            "alias": "",
+            "type": "Battle Rifle",
+            "image_link": "https://fnamerica.com/wp-content/uploads/2012/09/SCAR-17S-FDE_Rotators_6-1800x897.png",
+            "description": ""
+        },
+        "technical_info": {
+            "gun_action": "Short-stroke gas-operated piston",
+            "barrel_length": "254 mm",
+            "total_length": "787 mm",
+            "cartridge": "5.56×45mm NATO",
+            "rate_of_fire": "550–650  rounds/min",
+            "weight": "3.04 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "FN Herstal",
+            "place_of_origin": "Belgium"
+        }
+    },
+    {
+        "general_info": {
+            "name": "FN SCAR-SV",
+            "alias": "",
+            "type": "Designated Marksman Rifle ",
+            "image_link": "https://fnamerica.com/wp-content/uploads/2012/09/SCAR-17S-FDE_Rotators_6-1800x897.png",
+            "description": ""
+        },
+        "technical_info": {
+            "gun_action": "Short-stroke gas-operated piston",
+            "barrel_length": "254 mm",
+            "total_length": "787 mm",
+            "cartridge": "5.56×45mm NATO",
+            "rate_of_fire": "550–650  rounds/min",
+            "weight": "3.04 kg"
+        },
+        "history": {
+            "used_in": "",
+            "invented_by": "FN Herstal",
+            "place_of_origin": "Belgium"
+        }
+    }
+]

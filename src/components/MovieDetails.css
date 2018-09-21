@@ -1,0 +1,41 @@
+.movie_details {
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+}
+.movie_details h1,
+.movie_details h2,
+.movie_details h3,
+.movie_details h4,
+.movie_details h5,
+.movie_details h6 {
+    margin: 0;
+}
+.movie_details h4 {
+    margin: 5px 0 15px 0;
+    color: gray;
+}
+.movie_details img {
+    width: 20%;
+    padding: 10px;
+}
+.movie_details .poster {
+    float: right;
+}
+.movie_details .backdrop {
+    width: auto;
+    padding-left: 0;
+}
+.movie_details img::after {
+    clear: both;
+}
+
+
+@media screen and (max-width: 800px) {
+    .movie_details {
+        width: auto;
+    }
+    .movie_details img {
+        width: 40%;
+    }
+}
