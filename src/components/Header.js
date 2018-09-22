@@ -2,13 +2,16 @@ import React from 'react';
 import './Header.css'
 
 
-const Header = ({ searchChange }) => {
+const Header = ({ searchChange, formSubmit }) => {
 
         return(
             <header>
                 <h1>Movie Wiki</h1>
                 <div className="searchbox">
-                    <form action=".">
+                    <form 
+                        action="."
+                        onSubmit={formSubmit}
+                    >
                         <input 
                             type="search" 
                             autoFocus 

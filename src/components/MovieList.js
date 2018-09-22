@@ -6,16 +6,34 @@ const MovieList = ({ movies }) => {
     // For checking if the movies is populated 
     // If not populated, return a '' component
     // When state changes, this div will get re-rendered with usr cards 
-    if (movies === '') return('');
+    if (movies === '') return(
+        <h3 style={{
+            textAlign:'center',
+            color: '#ffc864'
+        }}>
+            Search Something... 
+        </h3>
+    );
 
     // For checking if the movies is not empty 
     // If not populated, return a '' component
-    if (movies.total_results === 0) return('');
+    if (movies.total_results === 0) return(
+        <h3 style={{
+            textAlign:'center',
+            color: '#ffc864'
+        }}>
+            Nothing Found...
+        </h3>
+    );
 
-    // For checking if the movies is not empty 
+    // For checking if the movies is undefined 
     // If not populated, return a '' component
-    if (movies.error !== undefined) return('');
+    if (movies.error !== undefined) return(
+        ''
+    );
     
+    // This block is meant for iterating and pushing all data
+    // And than render it in the component 
     let movies_arr = [];
     for (let i in movies.results) {
         movies_arr.push(
@@ -27,10 +45,9 @@ const MovieList = ({ movies }) => {
                     />
                 </div>
                 <div className="movie_title">
-                    <h3><a href={"/movie/" + movies.results[i].id}>{movies.results[i].original_title}</a></h3>
+                    <h3><a href={"/movie-wiki/movie/" + movies.results[i].id}>{movies.results[i].original_title}</a></h3>
                 </div>
             </div>
-            
         )
     }
     

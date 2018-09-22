@@ -5,8 +5,8 @@
     /* align-items: baseline; */
 }
 .movies_card_wrapper a {
-    color: #221600;
-    text-decoration: none;
+    color: orange;
+    text-decoration: underline;
 }
 .movies_card {
     display: block;

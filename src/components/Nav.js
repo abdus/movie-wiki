@@ -1,13 +1,13 @@
 import React from 'react';
 import './Nav.css';
+import logo from '../logo.png';
 
 const Nav = () => {
     return(
         <nav id="nav">
-            <img src="http://www.ffif.fr/wp-content/uploads/2018/01/short-film-icon.png" alt=""/>
+            <h1><a href="/movie-wiki">Movie Wiki</a></h1>
             <div className="nav__links">
-                <a href="">ABOUT</a>
-                <a href="">CONTRIBUTE</a>
+                <a href="/movie-wiki/about">ABOUT</a>
             </div>
         </nav>
     )
