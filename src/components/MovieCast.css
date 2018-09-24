@@ -1,0 +1,41 @@
+.movie_cast .cast_card_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.movie_cast .cast_card {
+    display: block;
+    min-width: 25%;
+    margin: 6px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 3px;
+    background: #dfe2e4;
+}
+.movie_cast .cast_card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px 0 0 0;
+    background: #bdc3c7;
+    padding: 10px;
+}
+.movie_cast h2 {
+    margin: 3em 0 10px 0;
+}
+.movie_cast h3 {
+    color: #2c3e50;
+    margin: 0;
+}
+.movie_cast h5 {
+    color: gray;
+}
+
+@media screen and (max-width: 800px) {
+    .movie_cast .cast_card {
+        min-width: 57%;
+        margin: 6px;
+    }
+}

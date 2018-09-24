@@ -5,7 +5,7 @@
     align-items: baseline;
 }
 .movie_reviews .collapse {
-    height: 200px;
+    max-height: 200px;
     overflow: hidden;
 }
 .movie_reviews .reviews_card {

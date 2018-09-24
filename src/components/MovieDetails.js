@@ -2,6 +2,7 @@ import React from 'react';
 import './MovieDetails.css'
 import SimilarMovies from './SimilarMovies';
 import Reviews from './Reviews';
+import MovieCast from './MovieCast';
 import img_404 from '../images/404.jpg';
 
 class MovieDetails extends React.Component {
@@ -80,7 +81,7 @@ class MovieDetails extends React.Component {
                 <h1>{this.state.movie.original_title}</h1>
                 
                 <h3>{this.state.movie.tagline}</h3>
-
+                
                 <img className="poster" 
                     src={
                         this.state.movie.poster_path === null ? img_404 : "https://image.tmdb.org/t/p/w342/" + this.state.movie.poster_path
@@ -113,6 +114,9 @@ class MovieDetails extends React.Component {
                     <div><strong>Produced By:</strong> <span>{this.state.producers}</span></div>
                 </div>
                 <div className="clear_both"></div>
+
+                {/* Movie Casts */}
+                <MovieCast movieID={this.props.match.params.id}/>
 
                 {/* Similar Movies Component */}
                 <SimilarMovies movieID={this.props.match.params.id}/>

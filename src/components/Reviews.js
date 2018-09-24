@@ -8,8 +8,7 @@ class Reviews extends React.Component {
         super(props);
 
         this.state = {
-            reviewList: '',
-            isExpand: true
+            reviewList: ''
         }
 
         fetch('https://api.themoviedb.org/3/movie/' + props.movieID +'/reviews?api_key=9526f02a9f92adaf39272b5d785cff61')
@@ -17,10 +16,6 @@ class Reviews extends React.Component {
         .then(res => {
             this.setState({reviewList: res})
         });
-    }
-
-    clickToExpand() {
-        this.setState({isExpand: !this.state.isExpand})
     }
 
     render() {
@@ -37,7 +32,6 @@ class Reviews extends React.Component {
                     </div>
                     <hr/>
                     <div
-                        onClick={this.clickToExpand.bind(this)} 
                         ref="reviews_content" 
                         className={'reviews_content ' + (this.state.isExpand ? 'collapse' : '')}
                     >
