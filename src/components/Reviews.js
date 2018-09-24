@@ -31,10 +31,7 @@ class Reviews extends React.Component {
                         </h3>
                     </div>
                     <hr/>
-                    <div
-                        ref="reviews_content" 
-                        className={'reviews_content ' + (this.state.isExpand ? 'collapse' : '')}
-                    >
+                    <div className='reviews_content'>
                         <ReactMarkdown source={this.state.reviewList.results[i].content}/>
                     </div>
                 </div>
