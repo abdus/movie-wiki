@@ -16,7 +16,6 @@ class Reviews extends React.Component {
         .then(res => res.json())
         .then(res => {
             this.setState({reviewList: res})
-            console.log(res);
         });
     }
 

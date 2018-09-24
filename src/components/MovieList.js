@@ -3,7 +3,6 @@ import './MovieList.css';
 import img_404 from '../images/404.jpg';
 
 const MovieList = ({ movies }) => {
-    console.log('IN MOVIES LIST', movies);
     // For checking if the movies is populated 
     // If not populated, return a '' component
     // When state changes, this div will get re-rendered with usr cards 
