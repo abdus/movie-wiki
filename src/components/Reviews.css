@@ -4,18 +4,28 @@
     justify-content: space-around;
     align-items: baseline;
 }
-.movie_reviews .reviews_card_wrapper a {
-    color: orange;
-    text-decoration: underline;
+.movie_reviews .collapse {
+    height: 200px;
+    overflow: hidden;
 }
 .movie_reviews .reviews_card {
     display: block;
     min-width: 100%;
     margin: 6px 0;
-    box-shadow: 0px 0px 8px 0px orange;
     border-radius: 3px;
     padding: 10px;
     line-height: 25px;
+    background: #dfe2e4;
+}
+
+.movie_reviews .reviews_content h1,
+.movie_reviews .reviews_content h2,
+.movie_reviews .reviews_content h3,
+.movie_reviews .reviews_content h4,
+.movie_reviews .reviews_content h5,
+.movie_reviews .reviews_content h6,
+.movie_reviews .reviews_content strong {
+    font-weight: 500;
 }
 .movie_reviews .reviews_card .reviewer_name {
     text-align: left;

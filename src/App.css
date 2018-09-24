@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900');
 
 body {
-    font-family: 'Noto Serif JP', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+a:hover {
+    color: #c0392b;
 }

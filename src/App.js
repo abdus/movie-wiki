@@ -8,10 +8,7 @@ import About from './components/About';
 import Footer from './components/Footer'
 import {
   BrowserRouter as Router,
-  Route,
-  Link,
-  Switch,
-  Redirect
+  Route
 } from 'react-router-dom';
 
 export default class App extends Component {

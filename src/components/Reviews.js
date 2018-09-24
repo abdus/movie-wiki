@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import './Reviews.css';
 import avatar from '../images/avatar.png'
 
@@ -7,7 +8,8 @@ class Reviews extends React.Component {
         super(props);
 
         this.state = {
-            reviewList: ''
+            reviewList: '',
+            isExpand: true
         }
 
         fetch('https://api.themoviedb.org/3/movie/' + props.movieID +'/reviews?api_key=9526f02a9f92adaf39272b5d785cff61')
@@ -17,6 +19,11 @@ class Reviews extends React.Component {
             console.log(res);
         });
     }
+
+    clickToExpand() {
+        this.setState({isExpand: !this.state.isExpand})
+    }
+
     render() {
 
         let review_list = [];
@@ -30,8 +37,12 @@ class Reviews extends React.Component {
                         </h3>
                     </div>
                     <hr/>
-                    <div className="reviews_content">
-                    {this.state.reviewList.results[i].content}
+                    <div
+                        onClick={this.clickToExpand.bind(this)} 
+                        ref="reviews_content" 
+                        className={'reviews_content ' + (this.state.isExpand ? 'collapse' : '')}
+                    >
+                        <ReactMarkdown source={this.state.reviewList.results[i].content}/>
                     </div>
                 </div>
             )

@@ -6,7 +6,6 @@ const Header = ({ searchChange, formSubmit }) => {
 
         return(
             <header>
-                <h1>Movie Wiki</h1>
                 <div className="searchbox">
                     <form 
                         action="."

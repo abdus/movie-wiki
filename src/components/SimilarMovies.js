@@ -25,12 +25,19 @@ class SimilarMovies extends React.Component {
                 <div key={i} className="movies_card">
                     <div>
                         <img 
-                            src={"http://image.tmdb.org/t/p/w92/" + this.state.similarMovies.results[i].poster_path} 
+                            src={"https://image.tmdb.org/t/p/w92/" + this.state.similarMovies.results[i].poster_path} 
                             alt=""
                         />
                     </div>
                     <div className="movie_title">
-                        <h3><a href={"/movie-wiki/movie/" + this.state.similarMovies.results[i].id}>{this.state.similarMovies.results[i].original_title}</a></h3>
+                        <h3>
+                            <a href={"/movie-wiki/movie/" + this.state.similarMovies.results[i].id}>
+                                {
+                                    this.state.similarMovies.results[i].original_title.length > 13 ? 
+                                    this.state.similarMovies.results[i].original_title.substring(0, 12) + '...' : this.state.similarMovies.results[i].original_title
+                                }
+                            </a>
+                        </h3>
                     </div>
                 </div>
             )

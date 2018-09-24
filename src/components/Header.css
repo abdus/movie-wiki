@@ -1,10 +1,10 @@
 header {
-    height: 70vh;
+    height: 40vh;
     display: table-cell;
     width: 100vw;
     text-align: center;
     vertical-align: middle;
-    color: orange;
+    color: #2c3e50;
 }
 header h1 {
     font-size: 3rem;
@@ -21,7 +21,7 @@ header .searchbox button {
     font-family: inherit;
     padding: .7rem;
     width: 60%;
-    border: 1px solid orange;
+    border: 1px solid #bdc3c7;
     border-radius: 30px 0 0px 30px;
     text-indent: 15px;
 } 

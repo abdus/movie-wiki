@@ -2,59 +2,115 @@ import React from 'react';
 import './MovieDetails.css'
 import SimilarMovies from './SimilarMovies';
 import Reviews from './Reviews';
+import img_404 from '../images/404.jpg';
 
 class MovieDetails extends React.Component {
     constructor(props) {
         super(props);
         
         this.state = {
-            movie: null
+            movie: null,
+            genres: null, 
+            producers: null,
+            languages_spoken: null
         }
 
         // Fetching movie data from API and saving it in state 
+        let genres_arr = [],
+            languages_arr = [],
+            producers_arr = [];
         fetch('https://api.themoviedb.org/3/movie/' + props.match.params.id +'?api_key=9526f02a9f92adaf39272b5d785cff61')
         .then(res => res.json())
         .then(res => {
             this.setState({movie: res});
+
+            // pushing genres 
+            for (let i in res.genres) {
+                genres_arr.push(res.genres[i].name);
+            }
+            genres_arr = genres_arr.join(', ');
+            // Pushing companies
+            for (let i in res.production_companies) {
+                producers_arr.push(res.production_companies[i].name)
+            }
+            producers_arr = producers_arr.join(', ');
+            // Pushing languages
+            for (let i in res.spoken_languages) {
+                languages_arr.push(res.spoken_languages[i].name)
+            }
+            languages_arr = languages_arr.join(', ');
+            this.setState({
+                genres: genres_arr, 
+                producers: producers_arr,
+                languages_spoken: languages_arr
+            });
         });
     }
 
     // A little helper for converting numbers to billion
-    convertToBillion(num) {
-        return ((num / 1000) / 1000) /1000;
+    convertToBMK(num) {
+        let num_str = num + "";
+        if (num_str.length > 7) {
+            return (((num / 1000) /1000) / 1000).toFixed(2) + " Billion"
+        }
+        if (num_str.length > 4) {
+            return ((num / 1000) /1000).toFixed(2) + " Million"
+        }
+        if ((num_str.length > 0)){
+            return ((num / 1000) /1000).toFixed(2) + " Thousand"
+        }
+        else {
+            return num;
+        }
     }
 
     render() {
         // Render a blank component if movie is null
-        if (this.state.movie === null) return ('');
+        if (this.state.movie === null) return (
+            <div className="movie_details loading">
+                <br/><br/><br/>
+                Loading...
+            </div>
+        );
 
         // Else, return a component with all the movie details 
         return(
             <div className="movie_details">
                 
-                <h2>{this.state.movie.original_title}</h2>
+                <h1>{this.state.movie.original_title}</h1>
                 
-                <h4>{this.state.movie.tagline}</h4>
-                
-                <img className="poster" src={"https://image.tmdb.org/t/p/w342/" + this.state.movie.poster_path} alt=""/>
+                <h3>{this.state.movie.tagline}</h3>
+
+                <img className="poster" 
+                    src={
+                        this.state.movie.poster_path === null ? img_404 : "https://image.tmdb.org/t/p/w342/" + this.state.movie.poster_path
+                    } 
+                    alt=""
+                />
 
                 <div>{this.state.movie.overview}</div>
                 <br/>
                 <div className="movie_overview">
-                    <div style={{background: '#e0b461'}}>OVERVIEW</div>
+                    <div style={{background: '#dfe2e4'}}>OVERVIEW</div>
                     <div><strong>Popularity(50):</strong> <span>{this.state.movie.popularity.toFixed(0)}</span></div>
 
-                    <div><strong>Collection:</strong> <span>{this.convertToBillion(this.state.movie.revenue).toFixed(2) + ' Billion USD'}</span></div>
+                    <div><strong>Budget:</strong> <span>{this.convertToBMK(this.state.movie.budget)}</span></div>
+
+                    <div><strong>Collection:</strong> <span>{this.convertToBMK(this.state.movie.revenue)}</span></div>
 
                     <div><strong>Runtime:</strong> <span>{this.state.movie.runtime === null ? 'UNKNOWN' : this.state.movie.runtime + ' mins'}</span></div>
-                    
-                    <div><strong>Produced By:</strong> <span>{this.state.movie.production_companies.length === 0 ? '' : this.state.movie.production_companies[0].name}</span></div>
 
                     <div><strong>Release Date:</strong> <span>{this.state.movie.release_date}</span></div>
 
                     <div><strong>Suitable for:</strong> <span>{this.state.movie.adult ? 'Adults Only' : 'All Age'}</span></div>
 
                     <div><strong>Rating:</strong> <span>{this.state.movie.vote_average + ' (' + this.state.movie.vote_count + ' Votes)'}</span></div>
+
+                    <div><strong>Language(s):</strong> <span>{this.state.languages_spoken}</span></div>
+
+                    <div><strong>Genres:</strong> <span>{this.state.genres}</span></div>
+
+                    <div><strong>Produced By:</strong> <span>{this.state.producers}</span></div>
                 </div>
                 <div className="clear_both"></div>
 

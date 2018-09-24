@@ -1,5 +1,19 @@
+@keyframes loading {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.loading {
+    animation: loading .5s ease-in-out infinite;
+}
+
 .movie_details {
     width: 60%;
+    min-height: 60vh;
     margin: auto;
     padding: 10px;
 }
@@ -10,17 +24,18 @@
 .movie_details h5,
 .movie_details h6 {
     margin: 0;
+    font-weight: 500;
 }
-.movie_details h4 {
+.movie_details h3 {
     margin: 5px 0 15px 0;
     color: gray;
 }
 .movie_details img {
     width: 20%;
     padding: 10px;
-    margin: 4px;
-    border: 1px solid gray;
     border-radius: 4px;
+    margin: 0 0 20px 7px;
+    background: #bdc3c7;
 }
 .movie_details .poster {
     float: right;
@@ -34,15 +49,25 @@
 }
 .movie_details .movie_overview {
     float: left;
-    border: 1px solid orange;
+    border: 1px solid #dfe2e4;
     border-radius: 5px;
     min-width: 50%;
 }
-.movie_details .movie_overview div{
-    border-bottom: 1px solid orange;
+.movie_details .movie_overview div {
+    border-bottom: 1px solid #dfe2e4;
     padding: 5px;
     display: flex;
     justify-content: space-between;
+}
+.movie_details .movie_overview div strong {
+    text-align: left;
+    font-weight: 500;
+    color: #c0392b;
+}
+.movie_details .movie_overview div span {
+    text-align: right;
+    font-weight: 100;
+    color: #2c3e50;
 }
 
 @media screen and (max-width: 800px) {

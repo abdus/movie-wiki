@@ -1,5 +1,6 @@
 import React from 'react';
 import './MovieList.css';
+import img_404 from '../images/404.jpg';
 
 const MovieList = ({ movies }) => {
     console.log('IN MOVIES LIST', movies);
@@ -7,29 +8,33 @@ const MovieList = ({ movies }) => {
     // If not populated, return a '' component
     // When state changes, this div will get re-rendered with usr cards 
     if (movies === '') return(
-        <h3 style={{
-            textAlign:'center',
-            color: '#ffc864'
-        }}>
-            Search Something... 
-        </h3>
+        <div>
+            <div className="movie_list">
+                <div>
+                    Start Typing To Get Movies... 
+                </div>
+            </div>
+        </div>
     );
 
     // For checking if the movies is not empty 
     // If not populated, return a '' component
     if (movies.total_results === 0) return(
-        <h3 style={{
-            textAlign:'center',
-            color: '#ffc864'
-        }}>
-            Nothing Found...
-        </h3>
+        <div>
+            <div className="movie_list">
+                <div>
+                    Nothing Found! Maybe Try Something Else?
+                </div>
+            </div>
+        </div>
     );
 
     // For checking if the movies is undefined 
     // If not populated, return a '' component
     if (movies.error !== undefined) return(
-        ''
+        <div>
+            <div className="movie_list"><div>Something Went wrong</div></div>
+        </div>
     );
     
     // This block is meant for iterating and pushing all data
@@ -40,7 +45,9 @@ const MovieList = ({ movies }) => {
             <div key={i} className="movies_card">
                 <div>
                     <img 
-                        src={"http://image.tmdb.org/t/p/w92/" + movies.results[i].poster_path} 
+                        src={
+                            movies.results[i].poster_path === null ? img_404 : "https://image.tmdb.org/t/p/w92/" + movies.results[i].poster_path
+                        } 
                         alt=""
                     />
                 </div>
@@ -53,10 +60,12 @@ const MovieList = ({ movies }) => {
     
     return (
         <div>
-            <div className="movies_card_wrapper">
-                {movies_arr}
-            </div>
-        </div>            
+            <div className="movie_list">
+                <div className="movies_card_wrapper">
+                    {movies_arr}
+                </div>
+            </div> 
+        </div>           
     )
 }
 
