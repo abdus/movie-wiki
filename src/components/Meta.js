@@ -5,7 +5,7 @@ const Meta = (props) => {
     console.log(props.data.original_title)
     return(
         <Helmet>
-            <title>{props.data.original_title}</title>
+            <title>{props.data.original_title + ' - ' + props.data.tagline}</title>
 
             {/* FACEBOOK AND TWITTER META */}
             <meta property="og:title" content={props.data.original_title}></meta>
