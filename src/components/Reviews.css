@@ -35,9 +35,3 @@
 }
 
 
-@media screen and (max-width: 800px) {
-    .movie_reviews .reviews_card {
-        min-width: 57%;
-        margin: 6px;
-    }
-}
