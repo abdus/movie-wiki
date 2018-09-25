@@ -1,6 +1,5 @@
 .genres_bar {
     width: auto;
-    padding: 1rem 0;
     background: #2c3e50;
     display: flex;
     flex-wrap: nowrap;
@@ -9,15 +8,29 @@
     align-items: flex-start;
 }
 .genres_bar span {
-    /* border: 1px solid gray; */
-    display: inline-block;
+    /* display: inline-block; */
     width: auto;
     word-break: keep-all;
     min-width: 100px;   
+    padding: 1rem 0;
+}
+.genres_bar span:hover {
+    background: white;
+    color: #2c3e50;
+}
+.genres_bar span:hover a {
+    color: #2c3e50;
+}
+.genres_bar span:hover a:hover {
+    color: #c0392b;
 }
 .genres_bar a {
     color: white;
 }
 .genres_bar a:hover {
     color: #c0392b;
+}
+.genres_bar .active {
+    background: #c0392b;
+    color: white;
 }

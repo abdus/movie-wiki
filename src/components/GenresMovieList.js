@@ -1,6 +1,7 @@
 import React from 'react';
 import './MovieList.css';
 import './GenresMovieList.css';
+import GenresJSON from './Genres.json'
 import img_404 from '../images/404.jpg';
 
 class GenresMovieList extends React.Component {
@@ -8,11 +9,12 @@ class GenresMovieList extends React.Component {
         super(props);
 
         this.state = {
-            movies: null
+            movies: null,
+            genres_type: null
         }
     }
 
-    fetchMovieList(url) {
+    fetchMovieList(url, genres_name = '') {
         fetch(url)
         .then(res => res.json()) 
         .then(res => {
@@ -37,7 +39,7 @@ class GenresMovieList extends React.Component {
                     </div>
                 )
             }
-            this.setState({movies: movies_arr});
+            this.setState({movies: movies_arr, genres_type: genres_name});
         })
     }
 
@@ -50,13 +52,21 @@ class GenresMovieList extends React.Component {
         ) {
             url2fetch = 'https://api.themoviedb.org/3/movie/' + this.props.match.params.id + '?api_key=9526f02a9f92adaf39272b5d785cff61'
             
+            let genresName = this.props.match.params.id;
+            if (this.props.match.params.id === 'top_rated') {
+                genresName = 'Top Reated';
+            }
             
-            return this.fetchMovieList(url2fetch);
+            return this.fetchMovieList(url2fetch, genresName);
 
         } else {
             url2fetch = 'https://api.themoviedb.org/3/discover/movie?api_key=9526f02a9f92adaf39272b5d785cff61&with_genres=' + this.props.match.params.id;
 
-            console.log(url2fetch)
+            for(let i in GenresJSON.genres) {
+                if(GenresJSON.genres[i].id === +this.props.match.params.id) {
+                    return this.fetchMovieList(url2fetch, GenresJSON.genres[i].name);
+                }
+            }
             return this.fetchMovieList(url2fetch);
         }
         
@@ -65,9 +75,12 @@ class GenresMovieList extends React.Component {
     // If not populated, return a '' component
     // When state changes, this div will get re-rendered with usr cards 
     render() {
-                                    
+        if (this.state.movies === null) return (
+            <div className="genres_movie_list"></div>
+        );                    
         return (
             <div className="genres_movie_list">
+                <h1>{this.state.genres_type.toUpperCase()}</h1>
                 <div className="movie_list">
                     <div className="movies_card_wrapper">
                         {this.state.movies}

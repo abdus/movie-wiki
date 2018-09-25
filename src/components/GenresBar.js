@@ -6,7 +6,6 @@ class GenresBar extends React.Component {
     constructor() {
         super();
 
-        
         this.state = {
             genres_html: null
         }        
@@ -23,7 +22,7 @@ class GenresBar extends React.Component {
             <span key='101'><a style={{color: 'yellow'}} href='/movie-wiki/genres/upcoming'>Upcoming</a></span>
         )
         genres_arr.push(
-            <span key='100'><a style={{color: 'yellow'}} href='/movie-wiki/genres/top_rated'>Top Rated</a></span>
+            <span key='102'><a style={{color: 'yellow'}} href='/movie-wiki/genres/top_rated'>Top Rated</a></span>
         )
 
 
@@ -41,7 +40,9 @@ class GenresBar extends React.Component {
     
     render() {
         return(
-            <div className="genres_bar">{this.state.genres_html}</div>
+            <div className="genres_bar">
+                {this.state.genres_html}
+            </div>
         )
     }
 }

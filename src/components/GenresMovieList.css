@@ -1,3 +1,8 @@
 .genres_movie_list {
     min-height: 70vh;
 }
+.genres_movie_list h1 {
+    width: auto;
+    font-weight: 300;
+    margin-left: 6px;
+}

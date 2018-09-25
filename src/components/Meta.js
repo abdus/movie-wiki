@@ -2,7 +2,6 @@ import React from 'react';
 import {Helmet} from 'react-helmet';
 
 const Meta = (props) => {
-    console.log(props.data.original_title)
     return(
         <Helmet>
             <title>{props.data.original_title + ' - ' + props.data.tagline}</title>
