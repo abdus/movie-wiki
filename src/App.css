@@ -10,3 +10,7 @@ a {
 a:hover {
     color: #c0392b;
 }
+.collapse {
+    max-height: 200px;
+    overflow: hidden;
+}

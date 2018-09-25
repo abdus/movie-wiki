@@ -1,0 +1,21 @@
+.genres_bar {
+    width: 100vw;
+    padding: 1rem 0;
+    background: #2c3e50;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    text-align: center;
+}
+.genres_bar span {
+    width: auto;
+    word-break: keep-all;
+    min-width: 130px;   
+    padding: 2px;
+}
+.genres_bar a {
+    color: white;
+}
+.genres_bar a:hover {
+    color: #c0392b;
+}

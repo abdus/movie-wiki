@@ -5,7 +5,9 @@ import Header from './components/Header';
 import MovieList from './components/MovieList';
 import MovieDetails from './components/MovieDetails';
 import About from './components/About';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import GenresBar from './components/GenresBar';
+import GenresMovieList from './components/GenresMovieList';
 import {
   BrowserRouter as Router,
   Route
@@ -49,7 +51,14 @@ export default class App extends Component {
     return(
       <Router>
         <div>
-          <Nav/>
+          <Route
+            path="/movie-wiki/"
+            component={Nav}
+          />
+          <Route
+            path="/movie-wiki/"
+            component={GenresBar}
+          />
           <Route
             exact
             path="/movie-wiki/" 
@@ -67,10 +76,18 @@ export default class App extends Component {
           />
           <Route
             exact 
+            path="/movie-wiki/genres/:id"
+            component={GenresMovieList}
+          />
+          <Route
+            exact 
             path="/movie-wiki/about"
             component={About}
           />
-          <Footer/>
+          <Route
+            path="/movie-wiki/"
+            component={Footer}
+          />
         </div>
       </Router>
     )

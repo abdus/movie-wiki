@@ -4,9 +4,7 @@
     justify-content: space-around;
     align-items: baseline;
 }
-.movie_reviews .collapse {
-    overflow: hidden;
-}
+
 .movie_reviews .reviews_card {
     display: block;
     min-width: 100%;

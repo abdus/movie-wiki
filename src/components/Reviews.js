@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import ExpandCollapse from './ExpandCollapse';
 import './Reviews.css';
 import avatar from '../images/avatar.png'
+
 
 class Reviews extends React.Component {
     constructor(props) {
@@ -31,9 +33,12 @@ class Reviews extends React.Component {
                         </h3>
                     </div>
                     <hr/>
-                    <div className='reviews_content'>
-                        <ReactMarkdown source={this.state.reviewList.results[i].content}/>
-                    </div>
+                    <ExpandCollapse>
+                        <div className='reviews_content'>
+                            <ReactMarkdown source={this.state.reviewList.results[i].content}/>
+                        </div>
+                    </ExpandCollapse>
+                    <div style={{color: 'orange'}}>Click To Expand</div>
                 </div>
             )
         }
