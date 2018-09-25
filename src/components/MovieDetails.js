@@ -3,6 +3,7 @@ import './MovieDetails.css'
 import SimilarMovies from './SimilarMovies';
 import Reviews from './Reviews';
 import MovieCast from './MovieCast';
+import Meta from './Meta';
 import img_404 from '../images/404.jpg';
 
 class MovieDetails extends React.Component {
@@ -59,10 +60,28 @@ class MovieDetails extends React.Component {
         }
         if ((num_str.length > 0)){
             return ((num / 1000) /1000).toFixed(2) + " Thousand"
-        }
-        else {
+        } else {
             return num;
         }
+    }
+
+    changeDateFormat(dt) {
+        let month_arr = [];
+        month_arr['01'] = 'Jan';
+        month_arr['02'] = 'Feb';
+        month_arr['03'] = 'Mar';
+        month_arr['04'] = 'Apr';
+        month_arr['05'] = 'May';
+        month_arr['06'] = 'June';
+        month_arr['07'] = 'July';
+        month_arr['08'] = 'Aug';
+        month_arr['09'] = 'Sept';
+        month_arr['10'] = 'Oct';
+        month_arr['11'] = 'Nov';
+        month_arr['12'] = 'Dec';
+        
+        let splitedDate = dt.split('-');
+        return (splitedDate[2] + ' ' + month_arr[splitedDate[1]] + ', ' + splitedDate[0]);
     }
 
     render() {
@@ -77,7 +96,8 @@ class MovieDetails extends React.Component {
         // Else, return a component with all the movie details 
         return(
             <div className="movie_details">
-                
+                <Meta data={this.state.movie}/>
+
                 <h1>{this.state.movie.original_title}</h1>
                 
                 <h3>{this.state.movie.tagline}</h3>
@@ -93,7 +113,8 @@ class MovieDetails extends React.Component {
                 <br/>
                 <div className="movie_overview">
                     <div style={{background: '#dfe2e4'}}>OVERVIEW</div>
-                    <div><strong>Popularity(50):</strong> <span>{this.state.movie.popularity.toFixed(0)}</span></div>
+                    
+                    <div><strong>Rating:</strong> <span>{this.state.movie.vote_average + ' ⭐ (' + this.state.movie.vote_count + ')'}</span></div>
 
                     <div><strong>Budget:</strong> <span>{this.convertToBMK(this.state.movie.budget)}</span></div>
 
@@ -101,11 +122,11 @@ class MovieDetails extends React.Component {
 
                     <div><strong>Runtime:</strong> <span>{this.state.movie.runtime === null ? 'UNKNOWN' : this.state.movie.runtime + ' mins'}</span></div>
 
-                    <div><strong>Release Date:</strong> <span>{this.state.movie.release_date}</span></div>
+                    <div><strong>Release Date:</strong> <span>{this.changeDateFormat(this.state.movie.release_date)} {(this.state.movie.status === 'Released') ? '' : '(Upcoming)'}</span></div>
 
                     <div><strong>Suitable for:</strong> <span>{this.state.movie.adult ? 'Adults Only' : 'All Age'}</span></div>
-
-                    <div><strong>Rating:</strong> <span>{this.state.movie.vote_average + ' (' + this.state.movie.vote_count + ' Votes)'}</span></div>
+                    
+                    <div><strong>Popularity Score:</strong> <span>{this.state.movie.popularity.toFixed(0)}</span></div>
 
                     <div><strong>Language(s):</strong> <span>{this.state.languages_spoken}</span></div>
 

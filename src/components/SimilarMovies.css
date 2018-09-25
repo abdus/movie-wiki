@@ -3,7 +3,7 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: stretch;
 }
 .similar_movies .movies_card {
     display: block;

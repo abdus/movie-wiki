@@ -1,17 +1,19 @@
 .genres_bar {
-    width: 100vw;
+    width: auto;
     padding: 1rem 0;
     background: #2c3e50;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     text-align: center;
+    align-items: flex-start;
 }
 .genres_bar span {
+    /* border: 1px solid gray; */
+    display: inline-block;
     width: auto;
     word-break: keep-all;
-    min-width: 130px;   
-    padding: 2px;
+    min-width: 100px;   
 }
 .genres_bar a {
     color: white;

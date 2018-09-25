@@ -12,13 +12,14 @@ class GenresMovieList extends React.Component {
         }
     }
 
-    componentDidMount() {
-        fetch('https://api.themoviedb.org/3/discover/movie?api_key=9526f02a9f92adaf39272b5d785cff61&with_genres=' + this.props.match.params.id)
+    fetchMovieList(url) {
+        fetch(url)
         .then(res => res.json()) 
         .then(res => {
             // This block is meant for iterating and pushing all data
             // And than render it in the component 
             let movies_arr = [];
+
             for (let i in res.results) {
                 movies_arr.push(
                     <div key={i} className="movies_card">
@@ -38,6 +39,27 @@ class GenresMovieList extends React.Component {
             }
             this.setState({movies: movies_arr});
         })
+    }
+
+    componentDidMount() {
+        let url2fetch = null;
+        if(
+            this.props.match.params.id === 'top_rated' || 
+            this.props.match.params.id === 'popular' || 
+            this.props.match.params.id === 'upcoming'
+        ) {
+            url2fetch = 'https://api.themoviedb.org/3/movie/' + this.props.match.params.id + '?api_key=9526f02a9f92adaf39272b5d785cff61'
+            
+            
+            return this.fetchMovieList(url2fetch);
+
+        } else {
+            url2fetch = 'https://api.themoviedb.org/3/discover/movie?api_key=9526f02a9f92adaf39272b5d785cff61&with_genres=' + this.props.match.params.id;
+
+            console.log(url2fetch)
+            return this.fetchMovieList(url2fetch);
+        }
+        
     }
     // For checking if the movies is populated 
     // If not populated, return a '' component
