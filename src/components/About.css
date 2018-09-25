@@ -1,0 +1,18 @@
+.about h1,
+.about h2,
+.about h3,
+.about h4,
+.about h5,
+.about h6 {
+    font-weight: 300;
+}
+.about .content {
+    width: 90%;
+    margin: auto;
+}
+.about code {
+    background: #d3d0d0a6;
+    color: #b61702;
+    padding: 2px;
+    border-radius: 2px;
+}

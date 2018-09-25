@@ -6,7 +6,6 @@
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-expand-collapse": "^0.2.0",
     "react-helmet": "^5.2.0",
     "react-markdown": "^3.6.0",
     "react-router-dom": "^4.3.1",
