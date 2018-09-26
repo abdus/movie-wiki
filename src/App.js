@@ -8,6 +8,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import GenresBar from './components/GenresBar';
 import GenresMovieList from './components/GenresMovieList';
+import PeopleDetails from './components/PeopleDetails';
 import {
   BrowserRouter as Router,
   Route
@@ -78,6 +79,11 @@ export default class App extends Component {
             exact 
             path="/movie-wiki/genres/:id"
             component={GenresMovieList}
+          />
+          <Route
+            exact 
+            path="/movie-wiki/people/:id"
+            component={PeopleDetails}
           />
           <Route
             exact 

@@ -19,7 +19,7 @@ class MovieCast extends React.Component {
                 cast_Arr.push(
                     <div key={i} className="cast_card">
                         <img src={ res.cast[i].profile_path === null ? img_404 : 'https://image.tmdb.org/t/p/w342' + res.cast[i].profile_path } alt=""/>
-                        <h3>{res.cast[i].name}</h3>
+                        <h3><a href={'/movie-wiki/people/' + res.cast[i].id}>{res.cast[i].name}</a></h3>
                         <h5>{res.cast[i].character}</h5>
                     </div>
                 )
