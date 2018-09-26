@@ -1,4 +1,5 @@
 import React from 'react';
+import MovieSlider from './MovieSlider';
 import './MovieDetails.css';
 import img_404 from '../images/404.jpg';
 
@@ -83,14 +84,11 @@ export default class PeopleDetails extends React.Component {
                     <div><strong>Adult Actor:</strong> <span>{this.state.people.adult === true ? 'Yes' : 'No'}</span></div>
                     
                     {this.state.people.homepage === null ? '' : <div><strong>Website:</strong> <span>{<a href={this.state.people.homepage}>Visit</a>}</span></div>}
-
-                    {/* <div><strong>Language(s):</strong> <span>{this.state.languages_spoken}</span></div>
-
-                    <div><strong>Genres:</strong> <span>{this.state.genres}</span></div>
-
-                    <div><strong>Produced By:</strong> <span>{this.state.producers}</span></div> */}
                 </div>
                 <div className="clear_both"></div>
+
+                {/* Movies in which actor casted */}
+                <MovieSlider type="Movies" urlParams={this.props.match.params.id}/>
             </div>
         )
     }

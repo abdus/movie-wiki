@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieDetails.css'
-import SimilarMovies from './SimilarMovies';
+import MovieSlider from './MovieSlider';
 import Reviews from './Reviews';
 import MovieCast from './MovieCast';
 import Meta from './Meta';
@@ -140,7 +140,7 @@ class MovieDetails extends React.Component {
                 <MovieCast movieID={this.props.match.params.id}/>
 
                 {/* Similar Movies Component */}
-                <SimilarMovies movieID={this.props.match.params.id}/>
+                <MovieSlider type="Similar Movies" urlParams={this.props.match.params.id}/>
 
                 {/* Reviews Component */}
                 <Reviews movieID={this.props.match.params.id}/>
