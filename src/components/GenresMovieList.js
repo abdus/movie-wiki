@@ -59,6 +59,10 @@ class GenresMovieList extends React.Component {
             
             return this.fetchMovieList(url2fetch, genresName);
 
+        } else if (this.props.match.params.id === '7_plus_rating') {
+            url2fetch = 'https://api.themoviedb.org/3/discover/movie?api_key=9526f02a9f92adaf39272b5d785cff61&sort_by=vote_count.desc&include_adult=false&include_video=true&vote_average.gte=7&vote_count.gte=1000';
+
+            return this.fetchMovieList(url2fetch, '7+ Rating 🌟');
         } else {
             url2fetch = 'https://api.themoviedb.org/3/discover/movie?api_key=9526f02a9f92adaf39272b5d785cff61&with_genres=' + this.props.match.params.id;
 

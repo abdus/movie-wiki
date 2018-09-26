@@ -4,6 +4,7 @@ import './Footer.css'
 const Footer = () => {
     return(
         <div className="footer">
+            <a href="https://themoviedb.org">Powered by TMDb</a><br/>
             <a href="https://github.com/thisisabdus">GitHub</a>&nbsp;
             <a href="https://twitter.com/thisisabdus">Twitter</a>&nbsp;
             <a href="https://abdusdev.me">abdusdev.me</a>&nbsp;<br/>
