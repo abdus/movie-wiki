@@ -53,14 +53,16 @@ class MovieDetails extends React.Component {
     // A little helper for converting numbers to billion
     convertToBMK(num) {
         let num_str = num + "";
-        if (num_str.length > 7) {
-            return (((num / 1000) /1000) / 1000).toFixed(2) + " Billion"
+        if (num_str.length > 9) {
+            return (((num / 1000) /1000) / 1000).toFixed(1) + " Billion"
         }
-        if (num_str.length > 4) {
-            return ((num / 1000) /1000).toFixed(2) + " Million"
+        if (num_str.length > 6) {
+            return ((num / 1000) /1000).toFixed(1) + " Million"
         }
-        if ((num_str.length > 0)){
-            return ((num / 1000) /1000).toFixed(2) + " Thousand"
+        if ((num_str.length > 3)){
+            return ((num / 1000) /1000).toFixed(1) + " Thousand"
+        } else if(num === 0){
+            return 'UNKNOWN';
         } else {
             return num;
         }
