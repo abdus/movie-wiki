@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import GenresBar from './components/GenresBar';
 import GenresMovieList from './components/GenresMovieList';
 import PeopleDetails from './components/PeopleDetails';
+import Config from './Config'
 import {
   BrowserRouter as Router,
   Route
@@ -36,7 +37,7 @@ export default class App extends Component {
     if (searchTerm === '') return;
 
     // Fetching the data 
-    fetch('https://api.themoviedb.org/3/search/movie?api_key=9526f02a9f92adaf39272b5d785cff61&include_adult=true&query=' + searchTerm)
+    fetch('https://api.themoviedb.org/3/search/movie?api_key=' + Config.api_key + '&include_adult=true&query=' + searchTerm)
     .then(res => res.json())
     .then(res => {
       this.setState({movies: res})

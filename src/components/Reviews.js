@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import ExpandCollapse from './ExpandCollapse';
 import './Reviews.css';
 import avatar from '../images/avatar.png'
+import Config from '../Config';
 
 
 class Reviews extends React.Component {
@@ -13,7 +14,7 @@ class Reviews extends React.Component {
             reviewList: ''
         }
 
-        fetch('https://api.themoviedb.org/3/movie/' + props.movieID +'/reviews?api_key=9526f02a9f92adaf39272b5d785cff61')
+        fetch('https://api.themoviedb.org/3/movie/' + props.movieID +'/reviews?api_key=' + Config.api_key)
         .then(res => res.json())
         .then(res => {
             this.setState({reviewList: res})

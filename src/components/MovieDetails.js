@@ -4,6 +4,7 @@ import MovieSlider from './MovieSlider';
 import Reviews from './Reviews';
 import MovieCast from './MovieCast';
 import Meta from './Meta';
+import Config from '../Config';
 import img_404 from '../images/404.jpg';
 
 class MovieDetails extends React.Component {
@@ -21,7 +22,7 @@ class MovieDetails extends React.Component {
         let genres_arr = [],
             languages_arr = [],
             producers_arr = [];
-        fetch('https://api.themoviedb.org/3/movie/' + props.match.params.id +'?api_key=9526f02a9f92adaf39272b5d785cff61')
+        fetch('https://api.themoviedb.org/3/movie/' + props.match.params.id +'?api_key=' + Config.api_key )
         .then(res => res.json())
         .then(res => {
             this.setState({movie: res});

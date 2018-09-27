@@ -16,7 +16,7 @@ class GenresBar extends React.Component {
 
         // PUSHING top_rated, popular and upcoming 
         genres_arr.push(
-            <span key='100'><a style={{color: 'yellow'}} href='/movie-wiki/genres/7_plus_rating'>7⭐</a></span>
+            <span key='100'><a style={{color: 'yellow'}} href='/movie-wiki/genres/7_plus_rating'>7 <span role='img' aria-label='a Start Emoji'>⭐</span></a></span>
         )
         genres_arr.push(
             <span key='101'><a style={{color: 'yellow'}} href='/movie-wiki/genres/popular'>Popular</a></span>

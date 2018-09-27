@@ -1,5 +1,6 @@
 import React from 'react';
 import './MovieSlider.css';
+import Config from '../Config';
 import img_404 from '../images/404.jpg'
 
 class MovieSlider extends React.Component {
@@ -11,13 +12,13 @@ class MovieSlider extends React.Component {
         }
 
         if(props.type === 'Similar Movies') {
-            fetch('https://api.themoviedb.org/3/movie/'+ this.props.urlParams +'/similar?api_key=9526f02a9f92adaf39272b5d785cff61')
+            fetch('https://api.themoviedb.org/3/movie/'+ this.props.urlParams +'/similar?api_key=' + Config.api_key)
             .then(res => res.json())
             .then(res => {
                 this.setState({ data: res.results });
             })
         } else if(props.type === 'Movies'){
-            fetch('https://api.themoviedb.org/3/person/' + this.props.urlParams +'/movie_credits?api_key=9526f02a9f92adaf39272b5d785cff61')
+            fetch('https://api.themoviedb.org/3/person/' + this.props.urlParams +'/movie_credits?api_key=' + Config.api_key)
             .then(res => res.json())
             .then(res => {
                 this.setState({ data: res.cast });
@@ -35,7 +36,7 @@ class MovieSlider extends React.Component {
                 <div key={i} className="movies_card">
                     <div>
                         <img 
-                            src={this.state.data[i].poster_path === null ? img_404 : "https://image.tmdb.org/t/p/w92/" + this.state.data[i].poster_path} 
+                            src={this.state.data[i].poster_path === null ? img_404 : "https://image.tmdb.org/t/p/" + Config.image_res + this.state.data[i].poster_path} 
                             alt=""
                         />
                     </div>
