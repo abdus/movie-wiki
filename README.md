@@ -1,5 +1,5 @@
 # Movie Wiki
-![Code Climate](https://api.codeclimate.com/v1/badges/93f562dc31d30928abc1/maintainability.png)
+![Code Climate](https://api.codeclimate.com/v1/badges/93f562dc31d30928abc1/maintainability.png) [![Coverage Status](https://coveralls.io/repos/github/thisisabdus/movie-wiki/badge.svg?branch=master)](https://coveralls.io/github/thisisabdus/movie-wiki?branch=master)
 
 A simple web-app built using ReactJS for searching movie's information using [TMDb](https://themoviedb.org) API. 
 
