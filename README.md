@@ -20,4 +20,4 @@ Check the live demo [HERE](https://abdusdev.me/movie-wiki)
 - Reviews (if available)
 
 ## Suggesstions/Feedback
-Always welcome. Drop the [Here](mailto:dev.abdus@gmail.com)
+Always welcome. Drop it [Here](mailto:dev.abdus@gmail.com)
