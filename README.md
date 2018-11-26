@@ -1,6 +1,5 @@
 # Movie Wiki
-
-![React Badge](./src/images/react_badge.png) ![TMDB Badge](./src/images/tmdb_badge.png) ![React Helmet Badge](./src/images/helmet_badge.png) ![React Router Badge](./src/images/react_router_badge.png)
+![Code Climate](https://api.codeclimate.com/v1/badges/93f562dc31d30928abc1/maintainability.png)
 
 A simple web-app built using ReactJS for searching movie's information using [TMDb](https://themoviedb.org) API. 
 
