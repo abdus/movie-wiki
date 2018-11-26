@@ -1,5 +1,7 @@
 # Movie Wiki
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) ![Code Climate](https://api.codeclimate.com/v1/badges/93f562dc31d30928abc1/maintainability.png) [![Coverage Status](https://coveralls.io/repos/github/thisisabdus/movie-wiki/badge.svg?branch=master)](https://coveralls.io/github/thisisabdus/movie-wiki?branch=master) ![dependencies](https://img.shields.io/david/thisisabdus/movie-wiki.svg)
+
+
 A simple web-app built using ReactJS for searching movie's information using [TMDb](https://themoviedb.org) API. 
 
 Check the live demo [HERE](https://abdusdev.me/movie-wiki)
