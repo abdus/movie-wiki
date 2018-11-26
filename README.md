@@ -1,5 +1,5 @@
 # Movie Wiki
-![Code Climate](https://api.codeclimate.com/v1/badges/93f562dc31d30928abc1/maintainability.png) [![Coverage Status](https://coveralls.io/repos/github/thisisabdus/movie-wiki/badge.svg?branch=master)](https://coveralls.io/github/thisisabdus/movie-wiki?branch=master) [![npm version](https://badge.fury.io/js/react.svg)](https://badge.fury.io/js/react)
+![Code Climate](https://api.codeclimate.com/v1/badges/93f562dc31d30928abc1/maintainability.png) [![Coverage Status](https://coveralls.io/repos/github/thisisabdus/movie-wiki/badge.svg?branch=master)](https://coveralls.io/github/thisisabdus/movie-wiki?branch=master) [![react](https://img.shields.io/badge/react-16.5.2-brightgreen.svg) ![react-dom](https://img.shields.io/badge/react--dom-16.5.2-brightgreen.svg) ![react-router-dom](https://img.shields.io/badge/react--dom-4.3.1-brightgreen.svg) ![react-helmet](https://img.shields.io/badge/react--helmet-5.2.0-brightgreen.svg)
 
 A simple web-app built using ReactJS for searching movie's information using [TMDb](https://themoviedb.org) API. 
 
